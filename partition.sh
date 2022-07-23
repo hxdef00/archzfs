@@ -12,7 +12,7 @@ INST_PRIMARY_DISK=$(echo $DISK | cut -f1 -d\ )
 
 INST_PARTSIZE_ESP=4
 INST_PARTSIZE_BPOOL=4
-INST_PARTSIZE_SWAP=8
+INST_PARTSIZE_SWAP=32
 
 for i in ${DISK}; do
   blkdiscard -f $i &
