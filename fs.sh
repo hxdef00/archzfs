@@ -1,7 +1,7 @@
 #!/bin/bash 
 
 # root fs
-zfs create -o canmount=off -o mountpoint=none rpool_$INST_UUID/$INST_ID
+zfs create -o canmount=off -o mountpoint=none rpool/$INST_ID
 
 # data fs
 zfs create -o canmount=off -o mountpoint=none bpool/$INST_ID
