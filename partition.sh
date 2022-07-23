@@ -39,6 +39,7 @@ disk_num=0; for i in $DISK; do disk_num=$(( $disk_num + 1 )); done
 if [ $disk_num -gt 1 ]; then INST_VDEV_BPOOL=mirror; fi
 
 sleep 5
+ls -l /dev/disk/by-id
 
 zpool create \
     -o compatibility=grub2 \
