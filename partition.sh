@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if ![[ -z "${DISK}" ]]; then
+if ! [[ -z "${DISK}" ]]; then
   echo 'define DISK'
   exit
 fi
