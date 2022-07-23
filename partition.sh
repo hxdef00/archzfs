@@ -54,7 +54,7 @@ zpool create \
     -O xattr=sa \
     -O mountpoint=/boot \
     -R /mnt \
-    bpool_$INST_UUID $INST_VDEV_BPOOL $(for i in ${DISK}; do printf "$i-part2 "; done)
+    bpool $INST_VDEV_BPOOL $(for i in ${DISK}; do printf "$i-part2 "; done)
     
 zpool create \
     -o ashift=12 \
@@ -68,4 +68,4 @@ zpool create \
     -O relatime=on \
     -O xattr=sa \
     -O mountpoint=/ \
-    rpool_$INST_UUID $INST_VDEV $(for i in ${DISK}; do printf "$i-part3 "; done)
+    rpool $INST_VDEV $(for i in ${DISK}; do printf "$i-part3 "; done)
